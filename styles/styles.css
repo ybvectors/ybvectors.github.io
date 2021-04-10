@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background: black;
+    font-family: sans-serif;
+    position: relative;
+}
+/* Navigation */
+nav{
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-name{
+    margin-right: 350px;
+    /* transform: translateX(-80%); */
+    transform: translateY(15%);
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(48, 175, 230);
+}
+/* Home Page */
+.home{
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.home h1{
+    color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.home h4{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.home p{
+    color: white;
+    line-height: 22px;
+}
+
+.home a{
+    color:rgb(48, 175, 230);
+    display: inline;
+    text-decoration: none;
+}
+
+.ig-logo{
+    size: 40px 40px;
+}
+
+.img-box{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right:100px;
+}
+
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition:bottom 1s, left 1s;
+}
+
+.img-box:hover .back-img{
+    bottom: 40px;
+
+}
+
+.img-box:hover .front-img{
+    left: 54%;
+}
+/* Register and Login pages */
+#register{
+    text-align: center;
+}
+
+
+.container {
+    background-color: black;
+    padding: 16px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    width: 450px;
+    border: none;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus {
+    background-color: black;
+    outline: none;
+    padding: 20px 10px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+}
+
+h2{
+    color: white;
+    /* font-size: 30px; */
+}
+
+h3{
+    color: white;
+}
+
+#register p{
+    color: white;
+    font-size: 18px;
+}
+
+form hr{
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(48, 175, 230);
+    border: 2px solid rgb(48, 175, 230);
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin a{
+    color:rgb(237, 148, 38);
+    text-decoration: none;
+}
+
+#login p{
+    color: white;
+    font-size: 18px;
+}
+
+/* Catalogue Page */
+
+#catalogue h1{
+    color:rgb(237, 148, 38);
+    font-size: 75px;
+}
+
+#catalogue{
+    margin: auto;
+    text-align: center;
+}  
+
+.illustrations {
+    margin: auto;
+    text-align: center;
+}
+
+.illustration {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    padding: 30px 50px;
+    width: 350px;
+    margin: 15px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    border: 2px solid white;
+}
+
+.preview {
+    height: 150px;
+    width: 250px;
+    text-align: center;
+}
+
+.preview>img {
+    object-fit: contain;
+    height: 150px;
+    width: 250px;
+}
+
+.no-illustrations {
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.button-details {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-details:hover {
+    background-color: rgb(48, 175, 230);
+    border: 2px solid rgb(48, 175, 230);
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* About Me page */
+
+#about{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-left-col{
+    flex-basis: 50%;
+}
+
+.about-left-col img{
+    width: 100%;
+}
+
+.about-right-col{
+    flex-basis: 50%;
+    text-align: right;
+}
+
+#about p {
+    color: white;
+    font-size: 18px;
+}
+
+.about-text{
+    max-width: 500px;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+.about-text h1{
+    color:rgb(48, 175, 230);
+    font-size: 75px;
+}
+
+.about-text h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+    color:rgb(237, 148, 38);
+}
+
+#illustration-details p{
+    color: white;
+}
+
+.illustrations-buttons {
+    text-align: center;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.delete-button {
+    
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+.edit-button {
+    
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+.edit-button:hover {
+    background-color: rgb(48, 175, 230);
+    border: 2px solid rgb(48, 175, 230);
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.delete-button:hover{
+    background-color: rgb(237, 148, 38);
+    border: 2px solid rgb(237, 148, 38);
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.details-info {
+    max-width: 700px;
+    margin: auto;
+}
+
+.details-info>img {
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+    max-height: 455px;
+}
+
+.description-para {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+hr{
+    color:rgb(48, 175, 230);
+}
+
+footer{
+    background-color: rgb(48, 175, 230);
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    height: 175px;
+}
+
+.footer-content {
+    padding: 35px;
+}
+footer h3{
+    color: black;
+}
+footer p{
+    color: black;
+    
+}
+
+#edit-publication p{
+    color: white;
+}
+
+#create-publication p{
+    color: white;
+}
+/* footer{
+    background: black;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    padding: 25px;
+} */
