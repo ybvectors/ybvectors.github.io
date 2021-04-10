@@ -1,1 +1,3 @@
-console.log('Hello!');
+import * as api from './api/data.js';
+window.api = api;
+
