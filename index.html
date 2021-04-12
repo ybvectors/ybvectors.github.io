@@ -6,6 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>YB Vectors</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='styles/styles.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -38,13 +40,19 @@
 </head>
 
 <body>
+
+  
+    
     <div class="main">
 
+        <div class="navbar">
         <nav>
-            <a href="/"><img src="images/logo.jpg" class="logo" ></a>
-            <h3 class="site-name">YB Vectors</h3>
+            
+            <a href="/"><img src="images/logo.jpg" class="logo"></a>
+            <h1 class="site-name">YB Vectors</h1>
+            
             <ul>
-
+    
                 <li>
                     <a href="/about">About me</a>
                 </li>
@@ -53,6 +61,9 @@
                 </li>
                 <li class="logged-in">
                     <a id="welcome" href="javascript:void(0)">Welcome, Username!</a>
+                </li>
+                <li class="logged-in admin-only">
+                    <a href="/post">Post</a>
                 </li>
                 <li class="logged-in">
                     <a id="logoutBtn" href="javascript:void(0)">Logout</a>
@@ -68,7 +79,7 @@
                 </li>
             </ul>
         </nav>
-
+        </div>
         <main id="site-content">
 
         </main>
@@ -275,13 +286,15 @@
                         perferendis deserunt. Mollitia corrupti, optio beatae consequuntur atque quisquam, ab suscipit
                         aliquam omnis repudiandae amet quasi asperiores blanditiis?</p>
 
-                    ${isOwner ? html`<div class="illustrations-buttons">
+                    <div class="illustrations-buttons">
                         <a href="/catalogue" class="edit-button">Back</a>
+                        <a href="">Comment</a>
                         <a href="/edit/${car._id}" class="edit-button">Edit</a>
                         <a @click=${onDelete} href="javascript:void(0)" class="delete-button">Delete</a>
                     </div>` : ''}
 
                 </div>
+
             </section>
 
             <section id="edit-publication">

@@ -18,6 +18,7 @@ function addOwner(object){
     const userId = sessionStorage.getItem('userId');
     const result = Object.assign({}, object);
     result.owner = createPointer('_User', userId);
+    result.owner.username = sessionStorage.getItem('username');
     return result;
 }
 
@@ -35,11 +36,12 @@ export async function createIllustration(illustration){
     return await api.post(host+'/classes/Illustration', body);
 }
 
-export async function editIllustration(illustration){
+export async function editIllustration(id, illustration){
     return await api.put(host+'/classes/Illustration/'+id, illustration);
 }
 
 export async function deleteIllustration(id){
+    await deleteAllCommentsByIllustration(id);
     return await api.del(host+'/classes/Illustration/'+id);
 }
 
@@ -48,7 +50,10 @@ export async function createComment(illustrationId, comment){
     body.illustration = createPointer('Illustration', illustrationId);
     return await api.post(host+'/classes/Comment', body);
 }
-
+export async function getAllComments(){
+    const response =  await api.get(host+'/classes/Comment?include=owner');
+    return response.results;
+}
 export async function getCommentsByIllustrationId(illustrationId){
     const query = JSON.stringify({illustration: createPointer('Illustration', illustrationId)});
     const response = await api.get(host+'/classes/Comment?where='+encodeURIComponent(query));
@@ -61,4 +66,15 @@ export async function editComment(id, comment){
 
 export async function deleteComment(id){
     return await api.del(host+'/classes/Comment/'+id);
+}
+
+export async function deleteAllCommentsByIllustration(id){
+    const comments = await getCommentsByIllustrationId(id);
+    comments.forEach(element => async function () {
+        return await deleteComment(element.objectId);
+    });
+}
+
+export async function getUserById(id){
+    return await api.get(host+'/users/'+id);
 }
