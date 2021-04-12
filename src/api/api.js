@@ -8,17 +8,18 @@ async function request(url, options){
         if(response.ok==false){
 
             const error = await response.json();
-            throw new Error(error.message);
+            throw new Error(error.error);
         }
 
         try{
             const data = await response.json();
             return data;
         }catch(err){
+            
             return response;
         }
     }catch(err){
-        alert(err.message);
+        alert(err);
         throw err;
     }
 }

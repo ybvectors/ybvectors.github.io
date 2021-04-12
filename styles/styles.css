@@ -24,6 +24,8 @@ nav{
     justify-content: space-between;
 }
 
+
+
 .site-name{
     margin-right: 350px;
     /* transform: translateX(-80%); */
@@ -50,10 +52,16 @@ nav ul li a:hover{
     text-decoration: none;
     color: rgb(48, 175, 230);
 }
+
+#welcome:hover{
+    color: white;
+    cursor: default;
+}
 /* Home Page */
 .home{
     margin-left: 8%;
     margin-top: 15%;
+    margin-bottom: 200px;
 }
 
 .home h1{
@@ -88,6 +96,7 @@ nav ul li a:hover{
     position: absolute;
     bottom: 0;
     right:100px;
+    margin-bottom: 50px;
 }
 
 .img-box img{
