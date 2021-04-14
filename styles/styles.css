@@ -661,7 +661,7 @@ hr{
 footer{
     background-color: rgb(48, 175, 230);
     height: auto;
-    width: calc(100vw - 17px);
+    width: 100%;
     padding: 20px 0;
     margin-top: 0;
     color: black;
