@@ -47,9 +47,10 @@ export async function detailsPage(ctx) {
     const illustration = await getIllustrationById(illustrationId);
     const comments = await getAllComments();
     const filteredComments = comments.filter(c=>c.illustration.objectId==illustrationId);
-    
+    filteredComments.reverse();
     
     ctx.render(detailsTemplate(illustration, onDelete, onComment, filteredComments));
+    window.scrollTo(0,0);
 
     async function onDelete() {
         const confirmed = confirm('Are you sure you want to delete this illustration?');

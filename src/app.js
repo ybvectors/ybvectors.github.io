@@ -32,6 +32,8 @@ function decorateContext(ctx, next){
     next();
 }
 
+
+
 function setUserNav(){
     const token = sessionStorage.getItem('authToken');
     if(token != null){

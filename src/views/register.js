@@ -28,6 +28,7 @@ const registerTemplate = (onSubmit) => html`
 
 export async function registerPage(ctx){
     ctx.render(registerTemplate(onSubmit));
+    window.scrollTo(0,0);
 
     async function onSubmit(event){
         event.preventDefault();

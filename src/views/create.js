@@ -11,7 +11,8 @@ const createTemplate = (onSubmit) => html`
             <p>Title</p>
             <input type="text" placeholder="Enter Title" name="title">
             <p>Description</p>
-            <input type="text" placeholder="Enter Description" name="description">
+            <!-- <input type="text" placeholder="Enter Description" name="description"> -->
+            <textarea placeholder="Enter Description" spellcheck="false" ></textarea>
             <p>Image URL</p>
             <input type="text" placeholder="Enter Image URL" name="imageUrl">
             <hr>
@@ -22,6 +23,8 @@ const createTemplate = (onSubmit) => html`
 
 export async function createPage(ctx){
     ctx.render(createTemplate(onSubmit));
+    window.scrollTo(0,0);
+
     async function onSubmit(event){
         event.preventDefault();
         const formData= new FormData(event.target);

@@ -24,4 +24,6 @@ const aboutTemplate = () => html`
 
 export async function aboutPage(ctx){
     ctx.render(aboutTemplate());
+    window.scrollTo(0,0);
+
 }

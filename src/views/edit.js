@@ -11,7 +11,8 @@ const editTemplate = (illustration, onSubmit) => html`
             <p>Title</p>
             <input type="text" placeholder="Enter Title" name="title" .value=${illustration.title}>
             <p>Description</p>
-            <input type="text" placeholder="Enter Description" name="description" .value=${illustration.Description}>
+            <!-- <input type="text" placeholder="Enter Description" name="description" .value=${illustration.Description}> -->
+            <textarea placeholder="Enter Description" spellcheck="false" >${illustration.Description}</textarea>
             <p>Image URL</p>
             <input type="text" placeholder="Enter Image URL" name="imageUrl" .value=${illustration.imageUrl}>
             <hr>
@@ -25,6 +26,7 @@ export async function editPage(ctx){
     const illustrationId = ctx.params.id;
     const illustration = await getIllustrationById(illustrationId);
     ctx.render(editTemplate(illustration, onSubmit));
+    window.scrollTo(0,0);
     async function onSubmit(event){
         event.preventDefault();
         const formData = new FormData(event.target);

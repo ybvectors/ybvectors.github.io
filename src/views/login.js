@@ -25,6 +25,7 @@ const loginTemplate = (onSubmit) => html`
 
 export async function loginPage(ctx){
     ctx.render(loginTemplate(onSubmit));
+    window.scrollTo(0,0);
 
     async function onSubmit(event){
         event.preventDefault();

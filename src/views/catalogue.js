@@ -30,4 +30,6 @@ export async function cataloguePage(ctx){
 
     const illustrations = await getIllustrations();
     ctx.render(catalogueTemplate(illustrations));
+    window.scrollTo(0,0);
+
 }

@@ -20,5 +20,6 @@ export async function homePage(ctx){
         ctx.page.redirect('/catalogue');
     }else{
         ctx.render(homeTemplate());
+        window.scrollTo(0,0);
     }
 }

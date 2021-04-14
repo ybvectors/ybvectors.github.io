@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='styles/styles.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+   
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
         // Single Page Apps for GitHub Pages
@@ -35,51 +35,44 @@
         }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-
+    <script>
+        window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+    </script>
     <script src='/src/app.js' type="module"></script>
+    
 </head>
 
 <body>
 
-  
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <a class="logo-container" href="/"><img id="nav-logo" src="images/logo.jpg"></a>
+            <h2>YB</h2><h2>Vectors</h2>
+        </div>
+        <ul class="links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/catalogue">Catalogue</a></li>
+            <li class="logged-in"><a id="welcome" href="">Welcome, Username</a></li>
+            <li class="logged-in admin-only"><a href="/post">Post</a></li>
+            <li class="logged-in"><a id="logoutBtn" href="javascript:void(0)">Logout</a></li>
+            <li class="guest"><a href="/login">Login</a></li>
+            <li class="guest"><a href="/register">Register</a></li>
+            <li><a href="https://www.instagram.com/yb_vectors/" target="_blank"><i
+                class="fa fa-instagram fa-2x"></i></a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
     
     <div class="main">
 
-        <div class="navbar">
-        <nav>
-            
-            <a href="/"><img src="images/logo.jpg" class="logo"></a>
-            <h1 class="site-name">YB Vectors</h1>
-            
-            <ul>
-    
-                <li>
-                    <a href="/about">About me</a>
-                </li>
-                <li>
-                    <a href="/catalogue">Catalogue</a>
-                </li>
-                <li class="logged-in">
-                    <a id="welcome" href="javascript:void(0)">Welcome, Username!</a>
-                </li>
-                <li class="logged-in admin-only">
-                    <a href="/post">Post</a>
-                </li>
-                <li class="logged-in">
-                    <a id="logoutBtn" href="javascript:void(0)">Logout</a>
-                <li class="guest">
-                    <a href="/login">Login</a>
-                </li>
-                <li class="guest">
-                    <a href="/register">Register</a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/yb_vectors/" target="_blank"><i
-                            class="fa fa-instagram fa-2x"></i></a>
-                </li>
-            </ul>
-        </nav>
-        </div>
+        
         <main id="site-content">
 
         </main>
@@ -347,16 +340,17 @@
 
         </div>
 
-
-        <footer>
-            <div class="footer-content">
-                <h3>YB Vectors Desktop Website</h3><br>
-                <p>For additional information feel free to contact me at email@email.com</p><br>
-                <p>YB Vectors &copy 2021</p>
-            </div>
-        </footer>
+        
+        
     </div>
-
+    <footer>
+        <div class="footer-content">
+            <h3>YB Vectors Official Website</h3>
+            <p>For more information, feel free to contact me at email@email.com</p>
+            <p>For best user experience, open on desktop.</p>
+            <p>YB Vectors &copy 2021</p>
+        </div>
+    </footer>
 </body>
-
+    
 </html>
