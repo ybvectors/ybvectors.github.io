@@ -29,6 +29,7 @@ const illustrationTemplate = (illustration) => html`
 export async function cataloguePage(ctx){
 
     const illustrations = await getIllustrations();
+    illustrations.reverse();
     ctx.render(catalogueTemplate(illustrations));
     window.scrollTo(0,0);
 
