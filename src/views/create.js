@@ -12,7 +12,7 @@ const createTemplate = (onSubmit) => html`
             <input type="text" placeholder="Enter Title" name="title">
             <p>Description</p>
             <!-- <input type="text" placeholder="Enter Description" name="description"> -->
-            <textarea placeholder="Enter Description" spellcheck="false" ></textarea>
+            <textarea placeholder="Enter Description" spellcheck="false" name="description"></textarea>
             <p>Image URL</p>
             <input type="text" placeholder="Enter Image URL" name="imageUrl">
             <hr>
