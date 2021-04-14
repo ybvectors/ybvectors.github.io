@@ -12,7 +12,7 @@ const editTemplate = (illustration, onSubmit) => html`
             <input type="text" placeholder="Enter Title" name="title" .value=${illustration.title}>
             <p>Description</p>
             <!-- <input type="text" placeholder="Enter Description" name="description" .value=${illustration.Description}> -->
-            <textarea placeholder="Enter Description" spellcheck="false" >${illustration.Description}</textarea>
+            <textarea placeholder="Enter Description" spellcheck="false" name="description">${illustration.Description}</textarea>
             <p>Image URL</p>
             <input type="text" placeholder="Enter Image URL" name="imageUrl" .value=${illustration.imageUrl}>
             <hr>
