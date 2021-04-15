@@ -41,7 +41,7 @@ function setUserNav(){
         document.querySelectorAll('.logged-in').forEach(li=>li.style.display = '');
         document.querySelectorAll('.guest').forEach(li=>li.style.display='none');
         document.getElementById('welcome').textContent = `Welcome, ${username}`;
-        if(sessionStorage.getItem('userId') == 'y2MFzIzOu9'){
+        if(sessionStorage.getItem('userId') == 'y2MFzIzOu9' || sessionStorage.getItem('userId') == 'wtFCsbQoqK'){
             document.querySelector('.admin-only').style.display = '';
         }else{
             document.querySelector('.admin-only').style.display = 'none';
